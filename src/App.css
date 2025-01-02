@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Outfit', sans-serif;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%, 50% 100%, 100% 50%, 50% 0%;
+    }
+
+    25% {
+        background-position: 50% 100%, 100% 50%, 50% 0%, 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%, 50% 0%, 0% 50%, 50% 100%;
+    }
+
+    75% {
+        background-position: 50% 0%, 0% 50%, 50% 100%, 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%, 50% 100%, 100% 50%, 50% 0%;
+    }
+}
+
+.background {
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.background:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100vh;
+    background:
+        radial-gradient(circle at 0 0, #FEF8C4, rgba(255, 0, 0, 0) 70.71%),
+        radial-gradient(circle at 0 100%, #DC4C87, rgba(0, 0, 255, 0) 70.71%),
+        radial-gradient(circle at 100% 0, #372CE6, rgba(0, 255, 0, 0) 70.71%),
+        radial-gradient(circle at 100% 100%, #D56450, rgba(0, 255, 0, 0) 70.71%);
+    z-index: -1;
+    background-size: 200% 200%;
+    animation: gradient 10s infinite linear;
+}

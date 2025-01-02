@@ -4,8 +4,8 @@ const AuthContext = createContext();
 
 const AuthProvider = ({ children }) => {
 
-    const login = async (async, password) => {
-
+    const login = async ( formData ) => {
+        
     }
 
     const logout = () => {
