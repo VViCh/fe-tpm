@@ -1,0 +1,87 @@
+.container {
+    background-color: #3F128D;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.title {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 64px;
+    margin-top: 66px;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.leftImage img {
+    width: 380px;
+    height: auto;
+}
+
+.cardWrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.cardGroup1 {
+    margin-top: 51px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+
+.cardGroup2 {
+    margin-top: 201px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.card {
+    padding: 34px 41px;
+    border: 1px solid #FFFFFF;
+    border-radius: 30px;
+    text-align: left;
+    backdrop-filter: blur(40px);
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+    width: 380px;
+    height: 280px;
+    background: linear-gradient(105deg, rgba(255, 255, 255, 0.4) 0.71%, rgba(255, 255, 255, 0.1) 97.61%);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.cardTitle {
+    font-family: 'Outfit', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 32px;
+    text-align: center;
+    line-height: 40.32px;
+    font-weight: 600;
+}
+
+.cardText {
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    line-height: 20.16px;
+    text-align: justify;
+    font-weight: 400;
+}
+
