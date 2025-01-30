@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "./Navbar"; 
 import HeroSection from "./HeroSection"; 
 import LandingPageSection from "./styles/LandingPage.module.css"
+import WhyJoin from "./WhyJoin";
 
 const LandingPage = () => {
     return (
@@ -9,6 +10,7 @@ const LandingPage = () => {
             <Navbar /> 
             <HeroSection /> 
             
+            <WhyJoin />
         </div>
     );
 };
