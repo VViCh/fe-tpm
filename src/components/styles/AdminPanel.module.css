@@ -23,8 +23,12 @@
     background: linear-gradient(105deg, rgba(255, 255, 255, 0.4) 0.71%, rgba(255, 255, 255, 0.1) 97.61%);
     font-weight: 400;
     font-size: 16px;
-    color: rgba(13, 12, 56, 0.5);
+    color: #FFFFFF;
     transform: 0.5s;
+}
+
+.searchInput::placeholder {
+    color: #c4c4c4;
 }
 
 .searchInput:focus {
@@ -46,36 +50,13 @@
     cursor: pointer;
 }
 
+.searchButton:hover {
+    background: linear-gradient(101.05deg, #E2B6B4 -2.11%, #D37190 61.72%);
+}
+
 .searchIcon {
     font-size: 24px;
 }
-
-
-/* .sort-button:hover {
-    background-color: #ff4f71;
-}
-
-.dropdown {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #3a3a3a;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.dropdown a {
-    color: #fff;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown a:hover {
-    background-color: #575757;
-} */
 
 .userContainer {
     width: 90%;
@@ -87,7 +68,6 @@
     box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(40px);
     background: linear-gradient(105deg, rgba(255, 255, 255, 0.4) 0.71%, rgba(255, 255, 255, 0.1) 97.61%);
-
 }
 
 .userContainerHeader {
@@ -100,7 +80,7 @@
     backdrop-filter: blur(40px);
     box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.25);
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     text-align: center;
     align-items: center;
@@ -127,7 +107,7 @@
     padding: 10px 40px;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     align-items: center;
     border-radius: 6px;
@@ -137,6 +117,7 @@
 
 .userListRight {
     cursor: pointer;
+    color: #FFFFFF;
 }
 
 .noUserMessage {

@@ -8,11 +8,12 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 import UserDashboard from "./components/UserDashboard";
 import AdminPanel from "./components/AdminPanel";
+import ViewData from "./components/ViewDataPage";
 import "./App.css";
 
 function App() {
   return (
-    <div className="background">
+    <div className="container">
       <AuthProvider>
         <Router>
           <Routes>
@@ -27,10 +28,11 @@ function App() {
                 </>
               }
             ></Route>
-            <Route exact path="/login" element={<Login />}></Route>
-            <Route exact path="/register" element={<Register />}></Route>
-            <Route exact path="/dashboard" element={<UserDashboard />}></Route>
-            <Route exact path="/manage" element={<AdminPanel />}></Route>
+              <Route exact path="/login" element={<Login />}></Route>
+              <Route exact path="/register" element={<Register />}></Route>
+              <Route exact path="/dashboard" element={<UserDashboard />}></Route>
+              <Route path="/manage" element={<AdminPanel />}></Route>
+              <Route path="/manage/view/:id" element={<ViewData />}></Route>
           </Routes>
         </Router>
       </AuthProvider>

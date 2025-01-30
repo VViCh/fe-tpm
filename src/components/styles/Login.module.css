@@ -1,14 +1,13 @@
-.login-container {
+.loginContainer {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #3F128D;
     flex-direction: column;
-  }
-  
-  
-  .login-box {
+}
+
+
+.loginBox {
     background: linear-gradient(105deg, rgba(255, 255, 255, 0.4) 0.71%, rgba(255, 255, 255, 0.1) 97.61%);
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
@@ -17,30 +16,28 @@
     height: 350px;
     justify-content: center;
     display: flex;
-  }
-  
-  .login-title {
+}
+
+.loginTitle {
     color: white;
     font-family: sans-serif;
     font-size: 50px;
     font-weight: bold;
     margin-bottom: 60px;
     display: block;
-  }
-  
-  
-  .input-label {
+}
+
+
+.inputLabel {
     display: block;
     text-align: left;
     margin-bottom: 8px;
     margin-top: 20px;
     color: white;
     font-size: 13px;
-   
-    
-  }
-  
-  .input-field {
+}
+
+.inputField {
     width: 350px;
     padding: 10px 15px;
     font-size: 14px;
@@ -52,18 +49,17 @@
     box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     appearance: none;
-  }
-  
-  .input-field::placeholder {
+}
+
+.inputField::placeholder {
     color: #cfcfcf;
-  }
-  
- 
-  .password-wrapper {
+}
+
+.passwordWrapper {
     position: relative;
-  }
-  
-  .toggle-password {
+}
+
+.togglePassword {
     position: absolute;
     right: 10px;
     top: 50%;
@@ -72,56 +68,51 @@
     border: none;
     color: #cfcfcf;
     cursor: pointer;
-  }
-  
-  
-  .button-container {
+}
+
+.buttonContainer {
     display: flex;
     justify-content: space-around;
     margin-top: 20px;
-    
-  }
-  
-  .register-button,
-  .signin-button {
-   
+}
+
+.registerButton,
+.signinButton {
     padding: 13px 35px;
     border: none;
     border-radius: 25px;
     font-size: 13px;
     cursor: pointer;
     transition: transform 0.2s ease;
-    
-  }
-  
-  .register-button {
+}
+
+.registerButton {
     background: none;
     border: 2px solid rgb(255, 255, 255);
     color: white;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2),
-      -2px -2px 4px rgba(255, 255, 255, 0.2);
-  }
-  
-  .register-button:hover {
+        -2px -2px 4px rgba(255, 255, 255, 0.2);
+}
+
+.registerButton:hover {
     transform: scale(1.05);
-  }
-  
-  .signin-button {
+}
+
+.signinButton {
     background: linear-gradient(145deg, #ff7a90, #ff5272);
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2),
-      -2px -2px 4px rgba(255, 255, 255, 0.2);
+        -2px -2px 4px rgba(255, 255, 255, 0.2);
     color: white;
     border: 2px solid rgb(255, 255, 255);
     border-color: #cfcfcf;
-  }
-  
-  .signin-button:hover {
-    transform: scale(1.05);
-  }
+}
 
-  .error-message {
+.signinButton:hover {
+    transform: scale(1.05);
+}
+
+.errorMessage {
     color: #FF6B6B;
     font-size: 14px;
     margin-top: 5px;
-  }
-  
+}
