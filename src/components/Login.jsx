@@ -1,102 +1,97 @@
 import React, { useState } from "react";
-import "./styles/Login.css";
+import LoginStyle from "./styles/Login.module.css";
 
 const Login = () => {
-  
-  const [teamName, setTeamName] = useState('');
-  const [password, setPassword] = useState('');
-  const [passwordVisible, setPasswordVisible] = useState(false);
-  const [errors, setErrors] = useState({});
+    const [teamName, setTeamName] = useState("");
+    const [password, setPassword] = useState("");
+    const [passwordVisible, setPasswordVisible] = useState(false);
+    const [errors, setErrors] = useState({});
 
-  
-  const togglePasswordVisibility = () => {
-    setPasswordVisible(!passwordVisible);
-  };
+    const togglePasswordVisibility = () => {
+        setPasswordVisible(!passwordVisible);
+    };
 
-  
-  const handleTeamNameChange = (e) => {
-    setTeamName(e.target.value);
-  };
+    const handleTeamNameChange = (e) => {
+        setTeamName(e.target.value);
+    };
 
+    const handlePasswordChange = (e) => {
+        setPassword(e.target.value);
+    };
 
-  const handlePasswordChange = (e) => {
-    setPassword(e.target.value);
-  };
+    const validate = () => {
+        const newErrors = {};
 
- 
-  const validate = () => {
-    const newErrors = {};
-    
-    
-    if (!teamName) {
-      newErrors.teamName = "Nama tim tidak boleh kosong.";
-    }
+        if (!teamName) {
+        newErrors.teamName = "Nama tim tidak boleh kosong.";
+        }
 
-    
-    if (!password) {
-      newErrors.password = "Password tidak boleh kosong.";
-    }
+        if (!password) {
+        newErrors.password = "Password tidak boleh kosong.";
+        }
 
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
+        setErrors(newErrors);
+        return Object.keys(newErrors).length === 0;
+    };
 
-  
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    
-    if (validate()) {
-      console.log("Team Name:", teamName);
-      console.log("Password:", password);
-      
-    }
-  };
+    const handleSubmit = (e) => {
+        e.preventDefault();
 
-  return (
-    <div className="login-container">
-      <h1 className="login-title">LOGIN</h1>
-      <div className="login-box">
-        <form onSubmit={handleSubmit}>
-          <label className="input-label">Team Name</label>
-          <input
-            type="text"
-            placeholder="Team Name"
-            className="input-field"
-            value={teamName}
-            onChange={handleTeamNameChange}
-          />
-          {errors.teamName && <p className="error-message">{errors.teamName}</p>} 
+        if (validate()) {
+        console.log("Team Name:", teamName);
+        console.log("Password:", password);
+        }
+    };
 
-          <label className="input-label">Password</label>
-          <div className="password-wrapper">
-            <input
-              type={passwordVisible ? "text" : "password"}
-              placeholder="Password"
-              className="input-field"
-              value={password}
-              onChange={handlePasswordChange}
-            />
-            <button
-              type="button"
-              className="toggle-password"
-              onClick={togglePasswordVisibility}
-            >
-              👁
-            </button>
-          </div>
-          {errors.password && <p className="error-message">{errors.password}</p>} 
-          <div className="button-container">
-            <button type="button" className="register-button">
-              Register
-            </button>
-            <button type="submit" className="signin-button">
-              Sign In
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
-  );
+    return (
+        <div className={LoginStyle.loginContainer}>
+            <h1 className={LoginStyle.loginTitle}>LOGIN</h1>
+            <div className={LoginStyle.loginBox}>
+                <form onSubmit={handleSubmit}>
+                    <label className={LoginStyle.inputLabel}>Team Name</label>
+                    <input
+                        type="text"
+                        placeholder="Team Name"
+                        className={LoginStyle.inputField}
+                        value={teamName}
+                        onChange={handleTeamNameChange}
+                    />
+                    {errors.teamName && (
+                        <p className={LoginStyle.errorMessage}>{errors.teamName}</p>
+                    )}
+
+                    <label className={LoginStyle.inputLabel}>Password</label>
+                    <div className={LoginStyle.passwordWrapper}>
+                        <input
+                            type={passwordVisible ? "text" : "password"}
+                            placeholder="Password"
+                            className={LoginStyle.inputField}
+                            value={password}
+                            onChange={handlePasswordChange}
+                        />
+                        <button
+                            type="button"
+                            className={LoginStyle.togglePassword}
+                            onClick={togglePasswordVisibility}
+                        >
+                            👁
+                        </button>
+                    </div>
+                    {errors.password && (
+                        <p className={LoginStyle.errorMessage}>{errors.password}</p>
+                    )}
+                    <div className={LoginStyle.buttonContainer}>
+                        <button type="button" className={LoginStyle.registerButton}>
+                            Register
+                        </button>
+                        <button type="submit" className={LoginStyle.signinButton}>
+                            Sign In
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    );
 };
 
 export default Login;
