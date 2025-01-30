@@ -1,0 +1,52 @@
+.navbarContainer {
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 32px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Menggunakan space-between agar item terdistribusi dengan baik */
+    width: 100%; /* Menjadikan navbar responsif dan mengisi layar */
+    max-width: 1376px; /* Menentukan lebar maksimum */
+    height: 119px;
+    margin: 0 auto; /* Agar navbar tetap terpusat */
+    box-sizing: border-box; /* Menghindari overflow */
+    position: fixed; /* Membuat navbar selalu berada di atas */
+    top: 0; /* Menjaga navbar tetap di atas */
+    left: 0; /* Memastikan navbar berada di kiri layar */
+    z-index: 10; /* Menjamin navbar berada di atas konten lain saat scroll */
+}
+
+.logo {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #000000;
+    text-decoration: underline;
+    line-height: 29px;
+}
+
+.navItems {
+    list-style: none;
+    display: flex;
+    gap: 52px; /* Kurangi gap */
+}
+
+.navItems li {
+    display: inline;
+}
+
+.menuItems {
+    font-family: 'Outfit', sans-serif;
+    text-decoration: none;
+    color: #170A45;
+    font-size: 24px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    line-height: 29px;
+    white-space: nowrap;
+}
+
+.menuItems:hover {
+    color: #7b3fe4;
+}
+

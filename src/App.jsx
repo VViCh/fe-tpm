@@ -12,14 +12,21 @@ import "./App.css";
 
 function App() {
   return (
-    <div class="background">
+    <div className="background">
       <AuthProvider>
         <Router>
-            
-          <Nav />
           <Routes>
             <Route exact path="/" element={<Temporary />}></Route>
-            <Route exact path="/Home" element={<LandingPage />}></Route>
+            <Route
+              exact
+              path="/home"
+              element={
+                <>
+                  <Nav />
+                  <LandingPage />
+                </>
+              }
+            ></Route>
             <Route exact path="/login" element={<Login />}></Route>
             <Route exact path="/register" element={<Register />}></Route>
             <Route exact path="/dashboard" element={<UserDashboard />}></Route>
