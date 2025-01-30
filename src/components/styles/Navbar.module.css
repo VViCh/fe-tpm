@@ -4,16 +4,16 @@
     padding: 32px 32px;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Menggunakan space-between agar item terdistribusi dengan baik */
-    width: 100%; /* Menjadikan navbar responsif dan mengisi layar */
-    max-width: 1376px; /* Menentukan lebar maksimum */
+    justify-content: space-between; 
+    width: 100%; 
+    max-width: 1376px; 
     height: 119px;
-    margin: 0 auto; /* Agar navbar tetap terpusat */
-    box-sizing: border-box; /* Menghindari overflow */
-    position: fixed; /* Membuat navbar selalu berada di atas */
-    top: 0; /* Menjaga navbar tetap di atas */
-    left: 0; /* Memastikan navbar berada di kiri layar */
-    z-index: 10; /* Menjamin navbar berada di atas konten lain saat scroll */
+    margin: 0 auto; 
+    box-sizing: border-box; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    z-index: 1;
 }
 
 .logo {
@@ -28,7 +28,7 @@
 .navItems {
     list-style: none;
     display: flex;
-    gap: 52px; /* Kurangi gap */
+    gap: 52px; 
 }
 
 .navItems li {
@@ -49,4 +49,3 @@
 .menuItems:hover {
     color: #7b3fe4;
 }
-
