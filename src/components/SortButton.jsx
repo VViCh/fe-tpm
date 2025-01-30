@@ -29,9 +29,10 @@ const SortButton = ({ onSort }) => {
             <div className={`${SortButtonStyle.dropdown} ${isOpen ? SortButtonStyle.show : ""}`}>
                 <a href="#" onClick={() => handleSort("name")}><span>Team Name (A-Z)</span></a>
                 <a href="#" onClick={() => handleSort("latest")}><span>Latest Team</span></a>
+                <a href="#" onClick={() => handleSort("oldest")}><span>Oldest Team</span></a>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default SortButton;
