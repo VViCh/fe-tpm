@@ -3,7 +3,8 @@ import WhyJoinSection from "./styles/WhyJoin.module.css";
 
 const WhyJoin = () => {
     return (
-        <section className={WhyJoinSection.container}>
+        <div className={WhyJoinSection.container}>
+            <div className={WhyJoinSection.line}></div>
             <h2 className={WhyJoinSection.title}>WHY YOU SHOULD JOIN</h2>
             <div className={WhyJoinSection.content}>
                 <div className={WhyJoinSection.leftImage}>
@@ -42,7 +43,7 @@ const WhyJoin = () => {
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     );
 };
 

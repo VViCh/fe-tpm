@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import HeroSection from "./HeroSection"; 
 import LandingPageSection from "./styles/LandingPage.module.css"
 import WhyJoin from "./WhyJoin";
+import Sponsor from "./Sponsor";
 
 const LandingPage = () => {
     return (
@@ -11,6 +12,10 @@ const LandingPage = () => {
             <HeroSection /> 
             
             <WhyJoin />
+
+            <Sponsor />
+
+            
         </div>
     );
 };
