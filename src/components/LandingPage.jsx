@@ -6,8 +6,8 @@ import About from "./About";
 import WhyJoin from "./WhyJoin";
 import Sponsor from "./Sponsor";
 import Medpar from "./Medpar";
-import LandingPageSection from "./styles/LandingPage.module.css"
-
+import LandingPageSection from "./styles/LandingPage.module.css";
+import ChampionPrize from "./ChampionPrize";
 
 
 const LandingPage = () => {
@@ -17,10 +17,12 @@ const LandingPage = () => {
             <HeroSection /> 
             <Mentorjurys />
             <About />
+            <ChampionPrize />
             <WhyJoin />
-
+            
             <Sponsor />
             <Medpar />
+
             
         </div>
     );

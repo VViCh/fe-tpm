@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #4c1d95; /* Purple background */
+    background-color: #3F128D;
     position: relative;
   }
   
@@ -36,7 +36,7 @@
     color: white;
     font-weight: 700;
     line-height: 80.64px;
-    background-color: #4c1d95; /* Optional: Adds a background for better visibility */
+    background-color: #3F128D;
   }
   
   
