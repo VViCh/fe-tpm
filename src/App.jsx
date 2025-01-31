@@ -22,43 +22,32 @@ function App() {
                 <Router>
                     <Routes>
                         <Route exact path="/" element={<Temporary />}></Route>
-                        <Route
-                            exact
-                            path="/home"
-                            element={
+                        <Route exact path="/home" element={
                                 <>
                                     <Nav />
                                     <LandingPage />
                                 </>
                             }
                         ></Route>
-                        <Route
-                            path="/login"
-                            element={
+                        <Route path="/login" element={
                                 <PublicRoute>
                                     <Login />
                                 </PublicRoute>
                             }
                         />
-                        <Route
-                            path="/register"
-                            element={
+                        <Route path="/register" element={
                                 <PublicRoute>
                                     <Register />
                                 </PublicRoute>
                             }
                         />
-                        <Route
-                            path="/dashboard"
-                            element={
+                        <Route path="/dashboard" element={
                                 <ProtectedRoute>
                                     <Navigate to="/dashboard/profile" replace />
                                 </ProtectedRoute>
                             }
                         />
-                        <Route
-                            path="/dashboard"
-                            element={
+                        <Route path="/dashboard" element={
                                 <ProtectedRoute>
                                     <Dashboard />
                                 </ProtectedRoute>
@@ -67,17 +56,13 @@ function App() {
                             <Route path="profile" element={<Profile />} />
                             <Route path="timeline" element={<Timeline />} />
                         </Route>
-                        <Route
-                            path="/manage"
-                            element={
+                        <Route path="/manage" element={
                                 <ProtectedAdminRoute>
                                     <AdminPanel />
                                 </ProtectedAdminRoute>
                             }
                         ></Route>
-                        <Route
-                            path="/manage/view/:id"
-                            element={
+                        <Route path="/manage/view/:id" element={
                                 <ProtectedAdminRoute>
                                     <ViewData />
                                 </ProtectedAdminRoute>

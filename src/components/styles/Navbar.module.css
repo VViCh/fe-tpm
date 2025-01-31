@@ -1,0 +1,51 @@
+.navbarContainer {
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 32px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    width: 100%; 
+    max-width: 1376px; 
+    height: 119px;
+    margin: 0 auto; 
+    box-sizing: border-box; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    z-index: 1;
+}
+
+.logo {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #000000;
+    text-decoration: underline;
+    line-height: 29px;
+}
+
+.navItems {
+    list-style: none;
+    display: flex;
+    gap: 52px; 
+}
+
+.navItems li {
+    display: inline;
+}
+
+.menuItems {
+    font-family: 'Outfit', sans-serif;
+    text-decoration: none;
+    color: #170A45;
+    font-size: 24px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    line-height: 29px;
+    white-space: nowrap;
+}
+
+.menuItems:hover {
+    color: #7b3fe4;
+}
