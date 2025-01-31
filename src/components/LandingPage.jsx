@@ -4,6 +4,7 @@ import HeroSection from "./HeroSection";
 import LandingPageSection from "./styles/LandingPage.module.css"
 import WhyJoin from "./WhyJoin";
 import Sponsor from "./Sponsor";
+import Medpar from "./Medpar";
 
 const LandingPage = () => {
     return (
@@ -14,7 +15,7 @@ const LandingPage = () => {
             <WhyJoin />
 
             <Sponsor />
-
+            <Medpar />
             
         </div>
     );
