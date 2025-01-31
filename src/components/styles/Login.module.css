@@ -1,74 +1,85 @@
-.loginContainer {
+.container {
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     flex-direction: column;
+    justify-content: center;
 }
-
 
 .loginBox {
     background: linear-gradient(105deg, rgba(255, 255, 255, 0.4) 0.71%, rgba(255, 255, 255, 0.1) 97.61%);
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
-    padding: 30px;
-    width: 490px;
-    height: 350px;
+    border: 1px solid rgba(255, 255, 255, 1);
+    border-radius: 30px;
+    padding:  40px 50px;
     justify-content: center;
+    align-items: center;
     display: flex;
+    flex-direction: column;
 }
 
 .loginTitle {
     color: white;
-    font-family: sans-serif;
-    font-size: 50px;
+    font-size: 48px;
     font-weight: bold;
-    margin-bottom: 60px;
+    margin: 20px auto;
     display: block;
 }
-
 
 .inputLabel {
     display: block;
     text-align: left;
-    margin-bottom: 8px;
+    margin-bottom: 16px;
     margin-top: 20px;
     color: white;
-    font-size: 13px;
+    font-size: 16px;
 }
 
+/* .passwordWrapper {
+    position: relative;
+    width: 400px;
+} */
+
 .inputField {
-    width: 350px;
-    padding: 10px 15px;
-    font-size: 14px;
-    border: solid 1px white;
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: white;
-    outline: none;
-    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    width: 400px;
+    height: 70px;
+    padding: 24px;
+    border: 1px solid #FFFFFF;
+    border-radius: 8px;
+    backdrop-filter: blur(40px);
+    box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(105deg, rgba(255, 255, 255, 0.4) 0.71%, rgba(255, 255, 255, 0.1) 97.61%);
+    font-weight: 400;
+    font-size: 16px;
+    color: #FFFFFF;
+    transition: 0.5s;
     appearance: none;
 }
 
 .inputField::placeholder {
-    color: #cfcfcf;
+    color: rgba(252, 252, 252, 0.5);
 }
 
-.passwordWrapper {
-    position: relative;
-}
-
-.togglePassword {
+/* .togglePassword {
     position: absolute;
-    right: 10px;
+    right: 20px;
     top: 50%;
     transform: translateY(-50%);
     background: none;
     border: none;
-    color: #cfcfcf;
     cursor: pointer;
+    color: white;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
 }
+
+.togglePassword:focus {
+    outline: none;
+} */
+
 
 .buttonContainer {
     display: flex;
@@ -76,40 +87,27 @@
     margin-top: 20px;
 }
 
-.registerButton,
-.signinButton {
-
-    padding: 13px 35px;
+.registerButton, .signinButton {
+    width: 180px;
+    height: 70px;
+    margin: 20px auto;
+    padding: 10px 20px;
     border: none;
-    border-radius: 25px;
-    font-size: 13px;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-
-}
-
-.registerButton {
-    background: none;
-    border: 2px solid rgb(255, 255, 255);
+    background: rgba(217, 217, 217, 0.25);
+    box-shadow: 0px 14.23px 42.69px 0px rgba(255, 255, 255, 0.25);
+    border: 3.56px solid rgba(255, 255, 255, 1);
+    border-radius: 200px;
     color: white;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2),
-        -2px -2px 4px rgba(255, 255, 255, 0.2);
-}
-
-.registerButton:hover {
-    transform: scale(1.05);
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
 }
 
 .signinButton {
-    background: linear-gradient(145deg, #ff7a90, #ff5272);
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2),
-        -2px -2px 4px rgba(255, 255, 255, 0.2);
-    color: white;
-    border: 2px solid rgb(255, 255, 255);
-    border-color: #cfcfcf;
+    background: linear-gradient(104.04deg, #E2B6B4 -4.93%, #D37190 83.51%);
 }
 
-.signinButton:hover {
+.signinButton:hover, .registerButton:hover {
+    box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 1);
     transform: scale(1.05);
 }
 

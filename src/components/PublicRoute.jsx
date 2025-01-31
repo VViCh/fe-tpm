@@ -2,14 +2,14 @@ import React from "react";
 import { Navigate } from "react-router-dom";
 import { useAuth } from "../utils/AuthContext";
 
-const ProtectedRoute = ({ children }) => {
+const PublicRoute = ({ children }) => {
     const { token } = useAuth();
 
-    if (!token) {
-        return <Navigate to="/login" replace />;
+    if (token) {
+        return <Navigate to="/dashboard/profile" replace />;
     }
 
     return children;
 };
 
-export default ProtectedRoute;
+export default PublicRoute;
