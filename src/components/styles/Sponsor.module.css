@@ -15,7 +15,6 @@
 .title {
     font-family: 'Outfit', sans-serif;
     font-size: 64px;
-    font-weight: bold;
     margin-top: 64px;
     font-weight: 700;
 }
@@ -39,13 +38,13 @@
     border-radius: 10px;
     text-align: center;
     justify-content: center;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(40px);
     box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
     position: relative;
     z-index: 0;
     display: flex;
-    align-items: center; /* Tengahkan secara vertikal */
-    justify-content: center; /* Tengahkan teks sponsor */
+    align-items: center; 
+    justify-content: center;
     text-align: center;
 }
 
@@ -53,7 +52,6 @@
     font-family: 'Outfit', sans-serif;
     font-weight: 600;
     font-size: 32px;
-    font-weight: bold;
     text-transform: uppercase;
     text-align: left; 
     display: block;
@@ -82,14 +80,9 @@
     font-weight: 600;
 }
 
-
-
 .goldSponsors, .silverSponsors {
     display: flex;
-    justify-content: center;
     gap: 80px;
-    width: 100%;
-    align-items: center;
 }
 
 .decorationRight {
@@ -109,5 +102,4 @@
     width: 140px;
     height: auto;
     z-index: 1;
-    pointer-events: none;
 }
