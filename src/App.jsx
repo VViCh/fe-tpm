@@ -8,7 +8,6 @@ import Profile from "./components/UserDashboard/Profile";
 import Timeline from "./components/UserDashboard/Timeline";
 import Login from "./components/Login";
 import Register from "./components/Register";
-import Nav from "./components/LandingComponents/Navbar";
 import Temporary from "./components/Temporary";
 import LandingPage from "./components/LandingPage";
 import AdminPanel from "./components/AdminPanel";
