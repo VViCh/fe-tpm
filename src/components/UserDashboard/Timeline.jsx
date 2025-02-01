@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock, faLocationDot, faLink } from "@fortawesome/free-solid-svg-icons";
-import TimelineStyle from "../styles/Timeline.module.css";
+import TimelineStyle from "../styles/UserDashboard/Timeline.module.css";
 
 const Timeline = () => {
     return (

@@ -1,19 +1,19 @@
 .navbarContainer {
-    background-color: white;
+    background: rgba(244, 236, 233, 1);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 32px 32px;
+    border-radius: 30px;
     display: flex;
     align-items: center;
-    justify-content: space-between; 
-    width: 100%; 
-    max-width: 1376px; 
-    height: 119px;
-    margin: 0 auto; 
-    box-sizing: border-box; 
-    position: absolute; 
-    top: 0; 
-    left: 0; 
-    z-index: 1;
+    justify-content: center;
+    width: 90%;
+    max-width: 1200px; /* Maximum width */
+    margin: 0 auto;
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    box-sizing: border-box;
 }
 
 .logo {
@@ -23,29 +23,36 @@
     color: #000000;
     text-decoration: underline;
     line-height: 29px;
+    margin-right: 40px;
 }
 
 .navItems {
     list-style: none;
     display: flex;
-    gap: 52px; 
-}
-
-.navItems li {
-    display: inline;
+    margin: 0;
+    padding: 0;
+    align-items: center;
 }
 
 .menuItems {
     font-family: 'Outfit', sans-serif;
     text-decoration: none;
     color: #170A45;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 600;
-    transition: color 0.3s ease;
-    line-height: 29px;
+    transition: all 0.3s ease;
     white-space: nowrap;
+    padding: 20px 20px;
+    position: relative;
+    cursor: pointer;
 }
 
 .menuItems:hover {
     color: #7b3fe4;
+    background: rgba(201, 178, 170, 0.8);
+}
+
+.menuItems[href]:hover {
+    color: #7b3fe4;
+    background: rgba(201, 178, 170, 0.8);
 }

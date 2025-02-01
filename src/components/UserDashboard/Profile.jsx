@@ -5,8 +5,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faCalendarDays, faEnvelope, faFilePdf, faIdCard } from "@fortawesome/free-solid-svg-icons";
 import { faWhatsapp, faGithub, faLine } from "@fortawesome/free-brands-svg-icons";
 import { Icon } from "@iconify/react";
-import ProfileStyle from "../styles/Profile.module.css";
-import InformationCardStyle from "../styles/InformationCard.module.css";
+import ProfileStyle from "../styles/UserDashboard/Profile.module.css";
+import InformationCardStyle from "../styles//InformationCard.module.css";
 
 const Profile = () => {
     const [userData, setUserData] = useState(null);

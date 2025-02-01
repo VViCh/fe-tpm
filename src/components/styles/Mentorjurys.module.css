@@ -1,125 +1,113 @@
 .container {
-    background-color: #4c1d95; /* Purple background */
-    color: white;
-    min-height: 100vh;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .title {
-    font-style: outfit;
-    font-size: 64px;
-    font-weight: 700;
-    margin: 2rem 0;
-    margin-bottom: 85px;
-    margin-top: 85px;
-  }
-  
-  .tabs {
-    display: flex;
-    justify-content: center;
-    border-bottom: 5px;
-    gap: 12.5rem;
-    margin-left: 75px;
-    
-
-  }
-  
-  .tab {
-    
-    font-size: 40px;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: white;
-    padding-bottom: 0.5rem;
-    cursor: pointer;
-    transition: color 0.3s ease;
-    height: 100px;
-
-  }
-  
-  .tab:hover {
-    color: #ddd;
-  }
-  
-  .activeTab {
-    color: #ffffff; /* Keep active tab white */
-    position: relative; /* Make sure the pseudo-element can be positioned correctly */
+  color: white;
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.activeTab::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 10px;
-    background-color: white; /* White underline */
-    transform: scaleX(1); /* Make sure it's fully visible for active tab */
-    transition: transform 0.3s ease;
-    color: aqua;
+.title {
+  font-style: outfit;
+  font-size: 64px;
+  font-weight: 700;
+  margin: 30px 0;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  border-bottom: 5px;
+  gap: 12.5rem;
+  margin-left: 75px;
 }
 
 .tab {
-    position: relative; /* Needed for the ::after pseudo-element to be positioned correctly */
+
+  font-size: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.tab:hover {
+  color: #ddd;
+}
+
+.activeTab {
+  color: #ffffff;
+  position: relative;
+}
+
+.activeTab::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background-color: white;
+  transform: scaleX(1);
+  transition: transform 0.3s ease;
+  color: aqua;
+}
+
+.tab {
+  position: relative;
 }
 
 .tab::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background-color: white;
-    transform: scaleX(0); /* Hidden by default */
-    transition: transform 0.3s ease;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: white;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
 }
 
 .tab:hover::after {
-    transform: scaleX(1); /* Smooth grow on hover */
+  transform: scaleX(1);
 }
 
-  
-  .mentorGrid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    margin-top: 2rem;
-  }
-  
-  .card {
-    background: linear-gradient(105.52deg, rgba(255, 255, 255, 0.4) 0.71%, rgba(255, 255, 255, 0.1) 97.61%); /* Card background in purple */
-    padding: 1.5rem;
-    width: 380px;
-    height: 480px;
-    border-radius: 30px;
-    text-align: center;
-    display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    justify-content: center; /* Align vertically */
-    align-items: center; /* Align horizontally */
+
+.mentorGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.card {
+  background: linear-gradient(105.52deg, rgba(255, 255, 255, 0.4) 0.71%, rgba(255, 255, 255, 0.1) 97.61%);
+  padding: 1.5rem;
+  width: 380px;
+  height: 480px;
+  border-radius: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .avatar {
-    background-color: #f3f3f3; /* Avatar circle background */
-    border-radius: 50%;
-    height: 218px;
-    width: 218px;
-    margin-bottom: 50px;
+  background-color: #f3f3f3;
+  border-radius: 50%;
+  height: 218px;
+  width: 218px;
+  margin-bottom: 50px;
 }
 
 .name {
-    font-size: 1.25rem;
-    font-weight: bold;
-    margin-bottom: 35px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 35px;
 }
 
 .description {
-    font-size: 1rem;
+  font-size: 1rem;
 }
-  
-  
-

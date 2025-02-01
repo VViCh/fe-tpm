@@ -24,7 +24,6 @@ function App() {
                         <Route exact path="/" element={<Temporary />}></Route>
                         <Route exact path="/home" element={
                                 <>
-                                    <Nav />
                                     <LandingPage />
                                 </>
                             }
