@@ -8,8 +8,7 @@ import Sponsor from "./Sponsor";
 import Medpar from "./Medpar";
 import LandingPageSection from "./styles/LandingPage.module.css";
 import ChampionPrize from "./ChampionPrize";
-
-
+import Timeline from "./Timeline";
 const LandingPage = () => {
     return (
         <div className={LandingPageSection.container}>
@@ -19,7 +18,7 @@ const LandingPage = () => {
             <About />
             <ChampionPrize />
             <WhyJoin />
-            
+            <Timeline />
             <Sponsor />
             <Medpar />
 
