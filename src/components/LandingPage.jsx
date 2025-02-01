@@ -5,7 +5,8 @@ import Mentorjurys from "./LandingComponents/Mentorjurys";
 import About from "./LandingComponents/About";
 import ChampionPrize from "./LandingComponents/ChampionPrize";
 import WhyJoin from "./LandingComponents/WhyJoin";
-import FAQ from "./LandingComponents/FAQ"
+import FAQ from "./LandingComponents/FAQ";
+import Timeline from "./Timeline";
 import Sponsor from "./LandingComponents/Sponsor";
 import Medpar from "./LandingComponents/Medpar";
 import ContactUs from "./LandingComponents/ContactUs";
@@ -45,7 +46,7 @@ const LandingPage = () => {
                 <FAQ />
             </div>
             <div ref={timelineRef}>
-                {/* Add Timeline component here */}
+                <Timeline />
             </div>
             <WhyJoin />
             <Sponsor />
