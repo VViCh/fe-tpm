@@ -1,5 +1,5 @@
 import React from "react";
-import SponsorSection from "./styles/Sponsor.module.css";
+import SponsorSection from "../styles/Sponsor.module.css";
 
 const Sponsor = () => {
     return (

@@ -1,41 +1,41 @@
 .container {
-    background-color: #3F128D;
+    padding: 70px;
     color: white;
-    text-align: center;
-    padding: 80px 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center the FAQ container */
     position: relative;
 }
 
-.line {
-    border: 1px solid #FFFFFF;
-    background: linear-gradient(105deg, rgba(255, 255, 255, 0.4) 0.71%, rgba(255, 255, 255, 0.1) 97.61%);
-    height: 24px;
-    backdrop-filter: blur(40px);
-    width: 100%;
+.componentHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
-.title {
-    margin-top: 64px;
-    font-family: 'Outfit', sans-serif;
-    font-weight: 700;
+.componentHeader h1 {
     font-size: 64px;
+    margin: 0;
 }
 
 .leftImage {
     position: absolute;
-    top: 130px;
-    left: 80px;
-    width: 140px;
+    top: 0;
+    left: -350px;
+    width: 100px;
     height: auto;
     transform: rotate(-10deg);
     z-index: 1;
 }
 
-.rightImage{
+.rightImage {
     position: absolute;
-    top: 138px;
-    right: 59px;
-    width: 140px;
+    top: 0;
+    right: -350px;
+    width: 100px;
     height: auto;
     transform: rotate(10deg);
     z-index: 1;
@@ -45,8 +45,7 @@
     display: flex;
     justify-content: center;
     gap: 50px;
-    margin-top: 140px;
-    margin-bottom: 277px;
+    margin-top: 80px;
     flex-direction: column;
 }
 

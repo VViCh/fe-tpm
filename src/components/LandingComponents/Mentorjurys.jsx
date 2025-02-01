@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./styles/Mentorjurys.module.css";
+import styles from "../styles/Mentorjurys.module.css";
 
 const Mentorjurys = () => {
   const mentorsData = {

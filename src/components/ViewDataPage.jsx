@@ -18,14 +18,26 @@ const ViewData = () => {
     const [modalContent, setModalContent] = useState("");
 
     useEffect(() => {
+        const token = localStorage.getItem("authToken");
         axios
-            .get(`/api/admin/teams/${id}`)
+            .get(`http://127.0.0.1:8000/api/admin/teams/${id}`, {
+                headers: {
+                    'Authorization': `Bearer ${localStorage.getItem('token')}`
+                }
+            })
             .then((response) => {
-                setTeam(response.data);
-                setTempTeam(response.data);
+                const fetchedTeam = response.data;
+                fetchedTeam.is_binusian = fetchedTeam.is_binusian === "binusian" ? "BINUSIAN" : "Non-BINUSIAN";
+                setTeam(fetchedTeam);
+                setTempTeam(fetchedTeam);
             })
             .catch((error) => {
-                console.error("Error fetching data:", error);
+                if (error.response && error.response.status === 401) {
+                    alert("You are not authorized. Please log in.");
+                    window.location.href = "/login";
+                } else {
+                    console.error("Error fetching data:", error.response || error.message);
+                }
             });
     }, [id]);
 
@@ -50,16 +62,33 @@ const ViewData = () => {
     };
 
     const handleVerifyClick = () => {
+        const token = localStorage.getItem("authToken");
+        const updatedTeam = {
+            ...tempTeam,
+            is_binusian: tempTeam.is_binusian.toLowerCase(),
+        };
+
         axios
-            .put(`/api/admin/teams/${id}`, tempTeam)
+            .put(`http://127.0.0.1:8000/api/admin/teams/${id}`, updatedTeam, {
+                headers: {
+                    'Authorization': `Bearer ${localStorage.getItem('token')}`
+                }
+            })
             .then((response) => {
-                setTeam(response.data);
+                const updatedResponse = response.data;
+                updatedResponse.is_binusian = updatedResponse.is_binusian === "binusian" ? "BINUSIAN" : "Non-BINUSIAN";
+                setTeam(updatedResponse);
                 setEditingFields([]);
                 alert("Changes verified!");
             })
             .catch((error) => {
-                console.error("Error updating data:", error);
-                alert("Failed to update data.");
+                if (error.response && error.response.status === 401) {
+                    alert("You are not authorized. Please log in.");
+                    window.location.href = "/login";
+                } else {
+                    console.error("Error updating data:", error.response || error.message);
+                    alert("Failed to update data.");
+                }
             });
     };
 

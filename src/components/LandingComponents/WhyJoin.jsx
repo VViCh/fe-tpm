@@ -1,10 +1,9 @@
 import React from "react";
-import WhyJoinSection from "./styles/WhyJoin.module.css";
+import WhyJoinSection from "../styles/WhyJoin.module.css";
 
 const WhyJoin = () => {
     return (
         <div className={WhyJoinSection.container}>
-            <div className={WhyJoinSection.line}></div>
             <h2 className={WhyJoinSection.title}>WHY YOU SHOULD JOIN</h2>
             <div className={WhyJoinSection.content}>
                 <div className={WhyJoinSection.leftImage}>

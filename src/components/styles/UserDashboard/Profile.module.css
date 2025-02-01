@@ -1,0 +1,45 @@
+.pageHeader {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0;
+    color: white;
+    border-radius: 8px;
+}
+
+.pageHeader h2 {
+    margin: 0;
+    font-size: 40px;
+    color: white;
+}
+
+.leftHeader {
+    display: flex;
+    flex-direction: column;
+}
+
+.lowerHeader {
+    display: flex;
+    font-size: 32px;
+}
+
+.pageHeader .profileIcon {
+    font-size: 100px;
+    color: white;
+}
+
+.informationContainer {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}

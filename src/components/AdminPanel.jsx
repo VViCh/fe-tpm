@@ -2,48 +2,90 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch, faEye, faPenToSquare, faTrash } from '@fortawesome/free-solid-svg-icons';
+import { faSearch, faPenToSquare, faTrash } from '@fortawesome/free-solid-svg-icons';
 import AdminPanelStyle from "./styles/AdminPanel.module.css";
 import SortButton from "./SortButton";
 
 const AdminPanel = () => {
     const [teams, setTeams] = useState([]);
     const [searchTerm, setSearchTerm] = useState("");
+    const [sortBy, setSortBy] = useState("created_at");
+    const [sortOrder, setSortOrder] = useState("desc");
 
     useEffect(() => {
         fetchTeams();
-    }, []);
+    }, [sortBy, sortOrder]);
 
     const fetchTeams = () => {
+        const token = localStorage.getItem("authToken");
         axios
-            .get("/api/admin/teams")
-            .then(response => {
+            .get("http://127.0.0.1:8000/api/admin/teams", {
+                params: {
+                    sort_by: sortBy,
+                    sort_order: sortOrder,
+                },
+                headers: {
+                    'Authorization': `Bearer ${localStorage.getItem('token')}`
+                }
+            })
+            .then((response) => {
                 setTeams(response.data);
             })
-            .catch(error => {
-                console.error("Error fetching data:", error);
+            .catch((error) => {
+                if (error.response && error.response.status === 401) {
+                    alert("You are not authorized. Please log in.");
+                    window.location.href = "/login";
+                } else {
+                    console.error("Error fetching data:", error.response || error.message);
+                }
             });
     };
 
     const handleSort = (criteria) => {
-        let sortedArray = [...teams];
         if (criteria === "name") {
-            sortedArray.sort((a, b) => a.nama_group.localeCompare(b.nama_group));
+            setSortBy("nama_group");
+            setSortOrder("asc");
         } else if (criteria === "latest") {
-            sortedArray.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+            setSortBy("created_at");
+            setSortOrder("desc");
         } else if (criteria === "oldest") {
-            sortedArray.sort((a, b) => new Date(a.created_at) - new Date(b.created_at));
+            setSortBy("created_at");
+            setSortOrder("asc");
         }
-        setTeams(sortedArray);
     };
 
     const handleSearch = (e) => {
         setSearchTerm(e.target.value);
     };
 
-    const filteredTeams = teams.filter(team =>
+    const filteredTeams = teams.filter((team) =>
         team.nama_group.toLowerCase().includes(searchTerm.toLowerCase())
     );
+
+    const handleDelete = (id) => {
+        if (window.confirm("Are you sure you want to delete this team?")) {
+            const token = localStorage.getItem("authToken");
+            axios
+                .delete(`http://127.0.0.1:8000/api/admin/teams/${id}`, {
+                    headers: {
+                        'Authorization': `Bearer ${localStorage.getItem('token')}`
+                    }
+                })
+                .then((response) => {
+                    alert(response.data.message);
+                    fetchTeams();
+                })
+                .catch((error) => {
+                    if (error.response && error.response.status === 401) {
+                        alert("You are not authorized. Please log in.");
+                        window.location.href = "/login";
+                    } else {
+                        console.error("Error deleting team:", error.response || error.message);
+                        alert("Failed to delete team. Please try again.");
+                    }
+                });
+        }
+    };
 
     return (
         <>
@@ -74,7 +116,7 @@ const AdminPanel = () => {
                 <div className={AdminPanelStyle.userContainerContent}>
                     {filteredTeams.length > 0 ? (
                         <ul className={AdminPanelStyle.usersList}>
-                            {filteredTeams.map(team => (
+                            {filteredTeams.map((team) => (
                                 <li className={AdminPanelStyle.userList} key={team.id}>
                                     <p>{team.nama_group}</p>
                                     <Link
@@ -83,7 +125,11 @@ const AdminPanel = () => {
                                     >
                                         <FontAwesomeIcon icon={faPenToSquare} /> View & Edit
                                     </Link>
-                                    <span className={AdminPanelStyle.userListRight}>
+                                    <span
+                                        className={AdminPanelStyle.userListRight}
+                                        onClick={() => handleDelete(team.id)}
+                                        style={{ cursor: "pointer" }}
+                                    >
                                         <FontAwesomeIcon icon={faTrash} /> Delete
                                     </span>
                                 </li>
@@ -98,6 +144,6 @@ const AdminPanel = () => {
             </div>
         </>
     );
-}
+};
 
 export default AdminPanel;
