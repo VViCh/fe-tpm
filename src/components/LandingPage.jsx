@@ -7,7 +7,7 @@ import About from "./LandingComponents/About";
 import ChampionPrize from "./LandingComponents/ChampionPrize";
 import WhyJoin from "./LandingComponents/WhyJoin";
 import FAQ from "./LandingComponents/FAQ";
-import Timeline from "./Timeline";
+import Timeline from "./LandingComponents/Timeline";
 import Sponsor from "./LandingComponents/Sponsor";
 import Medpar from "./LandingComponents/Medpar";
 import ContactUs from "./LandingComponents/ContactUs";
