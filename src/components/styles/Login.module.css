@@ -11,7 +11,7 @@
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
     border: 1px solid rgba(255, 255, 255, 1);
     border-radius: 30px;
-    padding:  40px 50px;
+    padding: 40px 50px;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -87,7 +87,8 @@
     margin-top: 20px;
 }
 
-.registerButton, .signinButton {
+.registerButton,
+.signinButton {
     width: 180px;
     height: 70px;
     margin: 20px auto;
@@ -106,7 +107,8 @@
     background: linear-gradient(104.04deg, #E2B6B4 -4.93%, #D37190 83.51%);
 }
 
-.signinButton:hover, .registerButton:hover {
+.signinButton:hover,
+.registerButton:hover {
     box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 1);
     transform: scale(1.05);
 }

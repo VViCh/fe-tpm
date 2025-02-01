@@ -5,13 +5,6 @@
     padding: 80px 0;
 }
 
-.line {
-    border: 1px solid #FFFFFF;
-    background: linear-gradient(105deg, rgba(255, 255, 255, 0.4) 0.71%, rgba(255, 255, 255, 0.1) 97.61%);
-    height: 24px;
-    backdrop-filter: blur(40px);
-}
-
 .title {
     font-family: 'Outfit', sans-serif;
     font-size: 64px;
@@ -25,7 +18,6 @@
     align-items: center;
     justify-content: center;
     margin-top: 63px;
-    margin-bottom: 193px;
 }
 
 .sponsorCard {
@@ -43,7 +35,7 @@
     position: relative;
     z-index: 0;
     display: flex;
-    align-items: center; 
+    align-items: center;
     justify-content: center;
     text-align: center;
 }
@@ -53,9 +45,9 @@
     font-weight: 600;
     font-size: 32px;
     text-transform: uppercase;
-    text-align: left; 
+    text-align: left;
     display: block;
-    margin-left: 20px; 
+    margin-left: 20px;
     color: #FFFFFF;
     position: absolute;
     top: 21px;
@@ -80,7 +72,8 @@
     font-weight: 600;
 }
 
-.goldSponsors, .silverSponsors {
+.goldSponsors,
+.silverSponsors {
     display: flex;
     gap: 80px;
 }

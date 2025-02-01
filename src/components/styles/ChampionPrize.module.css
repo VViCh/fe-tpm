@@ -1,129 +1,142 @@
 /* Container utama */
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #3F128D;
-    position: relative;
-    
-  }
-  
-  .title {
-    font-size: 64px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    position: absolute;
-    top: 3rem; /* Adjusted to place the title above the card */
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
-    color: white;
-    font-weight: 700;
-    line-height: 80.64px;
-    background-color: #3F128D;
-  }
-  
-  /* Wrapper untuk semua kartu */
-  .prizes {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    align-items: end;
-  }
-  
-  
-  /* Juara 2 */
-  .secondPlace {
-    background: linear-gradient(135deg, #9340ff, #5b3190);
-    width: 380px;
-    height: 580px;
-    border-radius: 30px;
-    border: 1px solid white;
-    background: linear-gradient(105.52deg, rgba(255, 255, 255, 0.4) 0.71%, rgba(255, 255, 255, 0.1) 97.61%);
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    color: white;
-    padding: 20px;
-  }
-  
-  /* Juara 1 (lebih besar) */
-  .firstPlace {
-    background: linear-gradient(135deg, #9340ff, #5b3190);
-    width: 380px;
-    height: 680px;
-    border-radius: 30px;
-    border: 1px solid white;
-    background: linear-gradient(105.52deg, rgba(255, 255, 255, 0.4) 0.71%, rgba(255, 255, 255, 0.1) 97.61%);
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    color: white;
-    margin-top: 190px;
-    padding: 20px;
-  }
-  
-  /* Juara 3 */
-  .thirdPlace {
-    background: linear-gradient(135deg, #9340ff, #5b3190);
-    width: 380px;
-    height: 480px;
-    border-radius: 30px;
-    border: 1px solid white;
-    background: linear-gradient(105.52deg, rgba(255, 255, 255, 0.4) 0.71%, rgba(255, 255, 255, 0.1) 97.61%);
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    color: white;
-    padding: 20px;
-  }
-  
-  /* Ikon */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+}
 
-  
-  .Medal img {
-    width: 179px;
-    height: 179px;
-    top: 338px;
-    left: 231px;
-  }
+.contentContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 
-  .Trophy img {
-    width: 180px;
-    height: 180px;
-    top: 238px;
-    left: 630px;
-    
-  }
+}
 
-  .Prize img {
-    width: 180px;
-    height: 180px;
-    top: 438px;
-    left: 1030px;
+.title {
+  font-size: 64px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  position: absolute;
+  top: 3rem;
+  /* Adjusted to place the title above the card */
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  color: white;
+  font-weight: 700;
+  line-height: 80.64px;
+  background-color: #3F128D;
+}
 
-  }
+/* Wrapper untuk semua kartu */
+.prizes {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: end;
+}
 
 
-  /* Teks */
-  h3 {
-    font-size: 48px;
-    font-weight: 600;
-    line-height: 60.48px;
-    text-align: center;
-    text-underline-position: from-font;
-    margin-bottom: 20px;
-  }
-  
-  p {
-    font-size: 32px;
-    font-weight: 600;
-    line-height: 40.32px;
-    margin-bottom: 10px;
-  }
-  
-  span {
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 30.24px;
-  }
-  
+/* Juara 2 */
+.secondPlace {
+  background: linear-gradient(135deg, #9340ff, #5b3190);
+  width: 380px;
+  height: 580px;
+  border-radius: 30px;
+  border: 1px solid white;
+  background: linear-gradient(105.52deg, rgba(255, 255, 255, 0.4) 0.71%, rgba(255, 255, 255, 0.1) 97.61%);
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: white;
+  padding: 20px;
+}
+
+/* Juara 1 (lebih besar) */
+.firstPlace {
+  background: linear-gradient(135deg, #9340ff, #5b3190);
+  width: 380px;
+  height: 680px;
+  border-radius: 30px;
+  border: 1px solid white;
+  background: linear-gradient(105.52deg, rgba(255, 255, 255, 0.4) 0.71%, rgba(255, 255, 255, 0.1) 97.61%);
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: white;
+  margin-top: 190px;
+  padding: 20px;
+}
+
+/* Juara 3 */
+.thirdPlace {
+  background: linear-gradient(135deg, #9340ff, #5b3190);
+  width: 380px;
+  height: 480px;
+  border-radius: 30px;
+  border: 1px solid white;
+  background: linear-gradient(105.52deg, rgba(255, 255, 255, 0.4) 0.71%, rgba(255, 255, 255, 0.1) 97.61%);
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: white;
+  padding: 20px;
+}
+
+/* Ikon */
+
+
+.Medal img {
+  width: 179px;
+  height: 179px;
+  top: 338px;
+  left: 231px;
+}
+
+.Trophy img {
+  width: 180px;
+  height: 180px;
+  top: 238px;
+  left: 630px;
+
+}
+
+.Prize img {
+  width: 180px;
+  height: 180px;
+  top: 438px;
+  left: 1030px;
+
+}
+
+
+/* Teks */
+.firstPlace h3,
+.secondPlace h3,
+.thirdPlace h3 {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 60.48px;
+  text-align: center;
+  text-underline-position: from-font;
+  margin-bottom: 20px;
+}
+
+.firstPlace p,
+.secondPlace p,
+.thirdPlace p {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 40.32px;
+  margin-bottom: 10px;
+}
+
+.firstPlace span,
+.secondPlace span,
+.thirdPlace span {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 30.24px;
+}

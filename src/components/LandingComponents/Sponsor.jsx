@@ -4,7 +4,6 @@ import SponsorSection from "../styles/Sponsor.module.css";
 const Sponsor = () => {
     return (
         <div className={SponsorSection.sponsorContainer}>
-            {/* <div className={SponsorSection.line}></div> */}
             <h2 className={SponsorSection.title}>SPONSORS</h2>
             <div className={SponsorSection.sponsorWrapper}>
                 {/* Platinum Sponsor */}

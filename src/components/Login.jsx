@@ -13,10 +13,6 @@ const Login = () => {
     const { login } = useAuth();
     const navigate = useNavigate();
 
-    // const togglePasswordVisibility = () => {
-    //     setPasswordVisible(!passwordVisible);
-    // };
-
     const validate = () => {
         const newErrors = {};
 
@@ -46,7 +42,12 @@ const Login = () => {
 
                 if (response.data.token) {
                     login(response.data.token, response.data.admin_status.toString());
-                    navigate("/dashboard/profile");
+
+                    if (response.data.admin_status === "isAdmin") {
+                        navigate("/manage");
+                    } else {
+                        navigate("/dashboard/profile");
+                    }
                 } else {
                     setErrors({ submit: "Login failed. Please check your credentials." });
                 }
@@ -79,27 +80,13 @@ const Login = () => {
                     )}
 
                     <label className={LoginStyle.inputLabel}>Password</label>
-                    {/* <div className={LoginStyle.passwordWrapper}> */}
-                        <input
-                            type={passwordVisible ? "text" : "password"}
-                            placeholder="Password"
-                            className={LoginStyle.inputField}
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
-                        />
-                        {/* <button
-                            type="button"
-                            className={LoginStyle.togglePassword}
-                            onClick={togglePasswordVisibility}
-                        >
-                            <Icon
-                                icon={passwordVisible ? "mdi:eye-off" : "mdi:eye"}
-                                color="grey"
-                                width="24"
-                                height="24"
-                            />
-                        </button>
-                    </div> */}
+                    <input
+                        type={passwordVisible ? "text" : "password"}
+                        placeholder="Password"
+                        className={LoginStyle.inputField}
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                    />
                     {errors.password && (
                         <p className={LoginStyle.errorMessage}>{errors.password}</p>
                     )}

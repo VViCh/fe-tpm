@@ -30,7 +30,6 @@ const Mentorjurys = () => {
 
   return (
     <div className={styles.container}>
-      {/* Mentors Section */}
       <h1 className={styles.title}>MENTORS</h1>
       <div className={styles.tabs}>
         {Object.keys(mentorsData).map((category) => (

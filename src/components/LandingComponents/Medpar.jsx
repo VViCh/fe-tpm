@@ -2,6 +2,9 @@ import React from "react";
 import MedparSection from "../styles/Medpar.module.css";
 
 const Medpar = () => {
+    const medparList1 = ["Googlensa", "mediabaru", "Sololingo", "CapCipCut", "MukaBuku"];
+    const medparList2 = ["getouttt", "malasbaca", "ambalabu", "i've played", "dis gamee"];
+
     return (
         <div className={MedparSection.container}>
             <div className={MedparSection.componentHeader}>
@@ -10,22 +13,22 @@ const Medpar = () => {
                 <img src="/Camera.png" alt="Camera" className={MedparSection.rightImage} />
             </div>
             <div className={MedparSection.medparWrapper}>
-                <div className={MedparSection.medparCard}>
-                    <div className={MedparSection.medparList}>
-                        <h2 className={MedparSection.medparName}>Googlensa</h2>
-                        <h2 className={MedparSection.medparName}>mediabaru</h2>
-                        <h2 className={MedparSection.medparName}>Sololingo</h2>
-                        <h2 className={MedparSection.medparName}>CapCipCut</h2>
-                        <h2 className={MedparSection.medparName}>MukaBuku</h2>
+                <div className={MedparSection.scrollContainer}>
+                    <div className={MedparSection.scrollContent}>
+                        {[...medparList1, ...medparList1].map((name, index) => (
+                            <h2 key={index} className={MedparSection.medparName}>
+                                {name}
+                            </h2>
+                        ))}
                     </div>
                 </div>
-                <div className={MedparSection.medparCard}>
-                    <div className={MedparSection.medparList}>
-                        <h2 className={MedparSection.medparName}>getouttt</h2>
-                        <h2 className={MedparSection.medparName}>malasbaca</h2>
-                        <h2 className={MedparSection.medparName}>ambalabu</h2>
-                        <h2 className={MedparSection.medparName}>i've played</h2>
-                        <h2 className={MedparSection.medparName}>dis gamee</h2>
+                <div className={MedparSection.scrollContainer}>
+                    <div className={MedparSection.scrollContent}>
+                        {[...medparList2, ...medparList2].map((name, index) => (
+                            <h2 key={index} className={MedparSection.medparName}>
+                                {name}
+                            </h2>
+                        ))}
                     </div>
                 </div>
             </div>
