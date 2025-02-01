@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import emailjs from '@emailjs/browser';
+// import emailjs from '@emailjs/browser';
 import ContactUsStyle from '../styles/ContactUs.module.css';
 
 const ContactUs = () => {
@@ -8,20 +8,20 @@ const ContactUs = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        emailjs
-            .sendForm(
-                'SERVICE_ID', 'TEMPLATE_ID', formRef.current, 'USER_ID',
-            )
-            .then(
-                () => {
-                    alert('Message sent successfully!');
-                    formRef.current.reset();
-                },
-                (error) => {
-                    console.error('Failed to send message:', error);
-                    alert('Failed to send message. Please try again.');
-                }
-            );
+    //     emailjs
+    //         .sendForm(
+    //             'SERVICE_ID', 'TEMPLATE_ID', formRef.current, 'USER_ID',
+    //         )
+    //         .then(
+    //             () => {
+    //                 alert('Message sent successfully!');
+    //                 formRef.current.reset();
+    //             },
+    //             (error) => {
+    //                 console.error('Failed to send message:', error);
+    //                 alert('Failed to send message. Please try again.');
+    //             }
+    //         );
     };
 
     return (
