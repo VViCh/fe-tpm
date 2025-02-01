@@ -3,7 +3,7 @@ import Navbar from "./LandingComponents/Navbar";
 import HeroSection from "./LandingComponents/HeroSection";
 import Mentorjurys from "./LandingComponents/Mentorjurys";
 import About from "./LandingComponents/About";
-import ChampionPrize from "./ChampionPrize";
+import ChampionPrize from "./LandingComponents/ChampionPrize";
 import WhyJoin from "./LandingComponents/WhyJoin";
 import FAQ from "./LandingComponents/FAQ"
 import Sponsor from "./LandingComponents/Sponsor";
