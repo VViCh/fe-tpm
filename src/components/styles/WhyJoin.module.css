@@ -8,6 +8,7 @@
     font-family: 'Outfit', sans-serif;
     font-weight: 700;
     font-size: 64px;
+    margin-top: 40px;
 }
 
 .content {
@@ -82,4 +83,3 @@
     text-align: justify;
     font-weight: 400;
 }
-

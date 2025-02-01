@@ -9,6 +9,8 @@ import FAQ from "./LandingComponents/FAQ"
 import Sponsor from "./LandingComponents/Sponsor";
 import Medpar from "./LandingComponents/Medpar";
 import ContactUs from "./LandingComponents/ContactUs";
+import SocialMedia from "./LandingComponents/SocialMedia";
+import Footer from "./LandingComponents/Footer";
 import LandingPageSection from "./styles/LandingPage.module.css";
 
 const LandingPage = () => {
@@ -51,6 +53,8 @@ const LandingPage = () => {
             <Sponsor />
             <Medpar />
             <ContactUs />
+            <SocialMedia />
+            <Footer />
         </div>
     );
 };

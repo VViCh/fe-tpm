@@ -31,7 +31,8 @@
     gap: 20px;
 }
 
-.navigations .linkContainer, .logOutButton {
+.navigations .linkContainer,
+.logOutButton {
     display: flex;
     flex-direction: row;
     justify-content: center;

@@ -75,7 +75,9 @@
     color: rgba(255, 153, 177, 1);
 }
 
-.editableField input[type="text"], .editableField input[type="date"], .editableField select {
+.editableField input[type="text"],
+.editableField input[type="date"],
+.editableField select {
     width: 230px;
     padding: 6px 8px;
     border: 1px solid #FFFFFF;
@@ -106,7 +108,8 @@ select option {
     background-color: #FFFFFF;
 }
 
-input:focus, select:focus {
+input:focus,
+select:focus {
     border: 1px solid rgba(255, 153, 177, 1);
 }
 

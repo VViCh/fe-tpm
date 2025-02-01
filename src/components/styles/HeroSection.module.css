@@ -5,24 +5,24 @@ body {
 .heroContainer {
     color: white;
     padding: 80px 20px;
-    padding-top: 180px; 
-    width: 100%; 
+    padding-top: 180px;
+    width: 100%;
     position: relative;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
-    justify-content: flex-start; 
-    max-width: 1376px; 
+    justify-content: flex-start;
+    max-width: 1376px;
     margin: 0 auto;
-    min-height: 100vh; 
+    min-height: 100vh;
     height: auto;
 }
 
 .heroContent {
     display: flex;
     width: 100%;
-    justify-content: space-between; 
-    align-items: flex-start; 
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 .heroText {
@@ -53,7 +53,7 @@ body {
 }
 
 .heroImage {
-    width: 306px; 
+    width: 306px;
     height: 306px;
     border-radius: 10px;
     overflow: hidden;
@@ -70,16 +70,16 @@ body {
     padding: 37px 33px;
     border: 1px solid #FFFFFF;
     border-radius: 30px;
-    backdrop-filter: blur(40px); 
+    backdrop-filter: blur(40px);
     box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
     z-index: 1;
-    width: 100%; 
-    max-width: 800px; 
-    margin-left: 61px; 
+    width: 100%;
+    max-width: 800px;
+    margin-left: 61px;
     background: linear-gradient(105deg, rgba(255, 255, 255, 0.4) 0.71%, rgba(255, 255, 255, 0.1) 97.61%);
 }
 
 .imageLofi {
-    width: 100%; 
+    width: 100%;
     border-radius: 10px;
 }

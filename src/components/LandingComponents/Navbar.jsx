@@ -1,8 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import NavbarPanelStyle from "../styles/Navbar.module.css";
+import { useAuth } from "../../utils/AuthContext";
 
 const Navbar = ({ homeRef, prizesRef, mentorsRef, aboutRef, faqRef, timelineRef }) => {
+    const { token, adminStatus } = useAuth();
     const scrollToRef = (ref) => {
         if (ref && ref.current) {
             ref.current.scrollIntoView({ behavior: "smooth" });
@@ -46,7 +48,15 @@ const Navbar = ({ homeRef, prizesRef, mentorsRef, aboutRef, faqRef, timelineRef 
                     </div>
                 </li>
                 <li>
-                    <Link to="/login" className={NavbarPanelStyle.menuItems}>Login</Link>
+                    {token ? (
+                        adminStatus === "isAdmin" ? (
+                            <Link to="/manage" className={NavbarPanelStyle.menuItems}>Admin Panel</Link>
+                        ) : (
+                            <Link to="/dashboard/profile" className={NavbarPanelStyle.menuItems}>Profile</Link>
+                        )
+                    ) : (
+                        <Link to="/login" className={NavbarPanelStyle.menuItems}>Login</Link>
+                    )}
                 </li>
             </ul>
         </div>
