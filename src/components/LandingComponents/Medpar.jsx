@@ -1,13 +1,14 @@
 import React from "react";
-import MedparSection from "./styles/Medpar.module.css";
+import MedparSection from "../styles/Medpar.module.css";
 
 const Medpar = () => {
     return (
         <div className={MedparSection.container}>
-            <div className={MedparSection.line}></div>
-            <h2 className={MedparSection.title}>MEDIA PARTNERS</h2>
-            <img src="/Speaker.png" alt="Speaker" className={MedparSection.leftImage} />
-            <img src="/Camera.png" alt="Camera" className={MedparSection.rightImage} />
+            <div className={MedparSection.componentHeader}>
+                <img src="/Speaker.png" alt="Speaker" className={MedparSection.leftImage} />
+                <h1>Media Partners</h1>
+                <img src="/Camera.png" alt="Camera" className={MedparSection.rightImage} />
+            </div>
             <div className={MedparSection.medparWrapper}>
                 <div className={MedparSection.medparCard}>
                     <div className={MedparSection.medparList}>
