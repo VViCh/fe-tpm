@@ -20,13 +20,7 @@ function App() {
             <AuthProvider>
                 <Router>
                     <Routes>
-                        <Route exact path="/" element={<Temporary />}></Route>
-                        <Route exact path="/home" element={
-                                <>
-                                    <LandingPage />
-                                </>
-                            }
-                        ></Route>
+                        <Route exact path="/" element={<LandingPage />}></Route>
                         <Route path="/login" element={
                                 <PublicRoute>
                                     <Login />
