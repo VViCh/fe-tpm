@@ -65,8 +65,6 @@
     position: relative;
     border-top: 1px solid rgba(255, 255, 255, 1);
     border-bottom: 1px solid rgba(255, 255, 255, 1);
-    border-left: 4px solid rgba(255, 255, 255, 1);
-    border-right: 4px solid rgba(255, 255, 255, 1);
 }
 
 .scrollContainer::before {
@@ -109,7 +107,6 @@
 }
 
 .medparName {
-    font-family: 'Outfit', sans-serif;
     font-weight: 600;
     font-size: 48px;
     display: inline-block;

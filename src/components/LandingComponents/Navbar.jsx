@@ -23,11 +23,6 @@ const Navbar = ({ homeRef, prizesRef, mentorsRef, aboutRef, faqRef, timelineRef 
                     </div>
                 </li>
                 <li>
-                    <div onClick={() => scrollToRef(prizesRef)} className={NavbarPanelStyle.menuItems}>
-                        Champion Prizes
-                    </div>
-                </li>
-                <li>
                     <div onClick={() => scrollToRef(mentorsRef)} className={NavbarPanelStyle.menuItems}>
                         Mentor & Jury
                     </div>
@@ -35,6 +30,11 @@ const Navbar = ({ homeRef, prizesRef, mentorsRef, aboutRef, faqRef, timelineRef 
                 <li>
                     <div onClick={() => scrollToRef(aboutRef)} className={NavbarPanelStyle.menuItems}>
                         About
+                    </div>
+                </li>
+                <li>
+                    <div onClick={() => scrollToRef(prizesRef)} className={NavbarPanelStyle.menuItems}>
+                        Champion Prizes
                     </div>
                 </li>
                 <li>
