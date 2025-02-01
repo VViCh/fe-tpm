@@ -3,6 +3,7 @@ import Navbar from "./LandingComponents/Navbar";
 import HeroSection from "./LandingComponents/HeroSection";
 import Mentorjurys from "./LandingComponents/Mentorjurys";
 import About from "./LandingComponents/About";
+import ChampionPrize from "./ChampionPrize";
 import WhyJoin from "./LandingComponents/WhyJoin";
 import FAQ from "./LandingComponents/FAQ"
 import Sponsor from "./LandingComponents/Sponsor";
@@ -31,14 +32,14 @@ const LandingPage = () => {
             <div ref={homeRef}>
                 <HeroSection />
             </div>
-            <div ref={prizesRef}>
-                {/* Add Champion Prizes component here */}
-            </div>
             <div ref={mentorsRef}>
                 <Mentorjurys />
             </div>
             <div ref={aboutRef}>
                 <About />
+            </div>
+            <div ref={prizesRef}>
+                <ChampionPrize />
             </div>
             <div ref={faqRef}>
                 <FAQ />
