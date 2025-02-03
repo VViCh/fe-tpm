@@ -66,10 +66,15 @@ const Register = () => {
         if (!formData.tgl_lahir_leader) newErrors.tgl_lahir_leader = "Tanggal lahir tidak boleh kosong.";
         if (!formData.cv) newErrors.cv = "Unggah file CV Anda.";
         if (formData.cv && !validateFileType(formData.cv)) newErrors.cv = "File CV harus berupa PDF, JPG, JPEG, atau PNG.";
-        if (formData.is_binusian === "binusian" && !formData.flazz_card) newErrors.flazz_card = "Unggah kartu Flazz Anda.";
-        if (formData.is_binusian === "binusian" && formData.flazz_card && !validateFileType(formData.flazz_card)) newErrors.flazz_card = "File Flazz Card harus berupa PDF, JPG, JPEG, atau PNG.";
-        if (formData.is_binusian === "non-binusian" && !formData.id_card) newErrors.id_card = "Unggah kartu identitas Anda.";
-        if (formData.is_binusian === "non-binusian" && formData.id_card && !validateFileType(formData.id_card)) newErrors.id_card = "File ID Card harus berupa PDF, JPG, JPEG, atau PNG.";
+
+        if (formData.is_binusian === "binusian") {
+            if (!formData.flazz_card) newErrors.flazz_card = "Unggah kartu Flazz Anda.";
+            if (formData.flazz_card && !validateFileType(formData.flazz_card)) newErrors.flazz_card = "File Flazz Card harus berupa PDF, JPG, JPEG, atau PNG.";
+        } else if (formData.is_binusian === "non-binusian") {
+            if (!formData.id_card) newErrors.id_card = "Unggah kartu identitas Anda.";
+            if (formData.id_card && !validateFileType(formData.id_card)) newErrors.id_card = "File ID Card harus berupa PDF, JPG, JPEG, atau PNG.";
+        }
+
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
     };
@@ -87,6 +92,9 @@ const Register = () => {
         if (validateStep3()) {
             const formDataToSend = new FormData();
             Object.keys(formData).forEach((key) => {
+                if (key === "flazz_card" && formData.is_binusian !== "binusian") return;
+                if (key === "id_card" && formData.is_binusian !== "non-binusian") return;
+
                 if (key === "is_binusian") {
                     formDataToSend.append(key, formData[key] === "binusian" ? "binusian" : "non_binusian");
                 } else {
